@@ -1,0 +1,661 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One|Trochut&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poiret+One|Sacramento|Special+Elite&display=swap");
+body::-webkit-scrollbar {
+  width: .8em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #a4d1c8;
+  border-radius: 10px;
+}
+
+#afterBody {
+  background-color: #faf9f9;
+  padding: 10px;
+}
+
+header {
+  margin: auto 280px auto 280px;
+  transition: margin 0.5s linear;
+  -webkit-transition: margin 0.5s linear;
+  -ms-transition: margin 0.5s linear;
+}
+
+header nav .brand {
+  font-family: "Inconsolata", monospace;
+  font-size: 1.2rem;
+  color: #202040;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+}
+
+header nav .btns {
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  color: #202040;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-decoration: line-through;
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+  -webkit-text-decoration-colort: transparent;
+  -ms-text-decoration-colort: transparent;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  border: none;
+  background-color: transparent;
+}
+
+header nav .brand:after {
+  content: "";
+  width: 0px;
+  height: 3px;
+  display: block;
+  background: #00fff0;
+  transition: 0.8s;
+  -webkit-transition: 0.8s;
+}
+
+header nav .brand:hover {
+  cursor: pointer;
+}
+
+header nav .brand:hover:after {
+  width: 100%;
+}
+
+header nav .brand:focus {
+  outline: none;
+}
+
+header nav .btns:after {
+  content: "";
+  width: 0px;
+  height: 3px;
+  display: block;
+  background: #00fff0;
+  transition: 0.8s;
+  -webkit-transition: 0.8s;
+}
+
+header nav .btns:hover {
+  cursor: pointer;
+}
+
+header nav .btns:hover:after {
+  width: 100%;
+}
+
+header nav .btns:focus {
+  outline: none;
+}
+
+header .navbar-toggler {
+  margin-top: 0;
+  height: 30px;
+  width: 40px;
+}
+
+header .navbar-toggler-icon {
+  height: 15px;
+  width: 15px;
+}
+
+header .navbar-toggler:focus {
+  text-decoration: none;
+}
+
+#mainarea {
+  margin: auto 200px auto 200px;
+  padding-bottom: 20px;
+  background-color: #eeeeee;
+  transition: margin 1.5s ease,width 0.8s linear;
+  -webkit-transition: margin 1.5s ease,width 0.8s linear;
+  -ms-transition: margin 1.5s ease,width 0.8s linear; 
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: transparent;
+}
+
+#mainarea .card-title {
+  font-family: "Fredoka One", cursive;
+  font-size: 1.5rem;
+}
+
+#mainarea .card {
+  padding: 8px;
+  transform: rotateY(15deg);
+  -ms-transform: rotateY(15deg);
+  /* IE 9 */
+  -webkit-transform: rotateY(15deg);
+  /* Safari 3-8 */
+  margin: 50px auto auto 28px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 0px;
+  border-color: #00fff0;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 20px 18px 10px -4px #777;
+  -webkit-transition: margin 0.8s linear, -webkit-transform 0.2s linear, -webkit-box-shadow 0.5s ease-out;
+  transition: margin 0.8s linear, -webkit-transform 0.2s linear, -webkit-box-shadow 0.5s ease-out;
+  transition: transform 0.2s linear, box-shadow 0.5s ease-out, margin 0.8s linear;
+  transition: transform 0.2s linear, box-shadow 0.5s ease-out, margin 0.8s linear, -webkit-transform 0.2s linear, -webkit-box-shadow 0.5s ease-out;
+  -webkit-transition: transform 0.2s linear, box-shadow 0.5s ease-out, margin 0.8s linear;
+  /* For Safari 3.1 to 6.0 */
+  color: #202040;
+}
+
+#mainarea .card .card-text {
+  font-family: "Fredoka One", cursive;
+  font-size: 1rem;
+  color: black;
+}
+
+#mainarea .card .cardbtn {
+  font-family: "Inconsolata", monospace;
+  font-size: auto;
+  color: auto;
+  font-weight: bolder;
+}
+
+#mainarea .card form {
+  margin: 0;
+  padding: 0;
+}
+
+#mainarea .card:hover {
+  transform: rotateY(1deg);
+  -ms-transform: rotateY(1deg);
+  /* IE 9 */
+  -webkit-transform: rotateY(1deg);
+  /* Safari 3-8 */
+  -webkit-box-shadow: 15px 15px 10px -10px #00fff0;
+          box-shadow: 15px 15px 10px -10px #00fff0;
+}
+
+#mainarea .card-text:hover {
+  cursor: pointer;
+}
+
+#mainarea .aboutArea {
+  -webkit-perspective: 1900px;
+          perspective: 1900px;
+}
+
+#mainarea .skillsArea {
+  -webkit-perspective: 1900px;
+          perspective: 1900px;
+}
+
+#mainarea .projectsArea {
+  -webkit-perspective: 1900px;
+          perspective: 1900px;
+}
+
+#contactpage {
+  -webkit-transition: margin 0.7s linear;
+  transition: margin 0.7s linear;
+  margin: auto 200px auto 200px;
+  background-color: #eeeeee;
+  padding: 30px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: transparent;
+}
+
+#contactpage h2 {
+  font-family: "Fredoka One", cursive;
+  margin-bottom: 60px;
+  color: #202040;
+}
+
+#contactpage h4 {
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  color: #393e46;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+#contactpage .subscribe {
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 0px;
+  border-color: #00fff0;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  -webkit-box-shadow: 20px 18px 10px -10px #777;
+          box-shadow: 20px 18px 10px -10px #777;
+  -webkit-transition: -webkit-box-shadow 0.8s ease-in;
+  transition: -webkit-box-shadow 0.8s ease-in;
+  transition: box-shadow 0.8s ease-in;
+  transition: box-shadow 0.8s ease-in, -webkit-box-shadow 0.8s ease-in;
+}
+
+#contactpage .subscribe #emailId {
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  color: #202040;
+  font-weight: bold;
+  width: 90%;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #202040;
+  border-bottom-width: 2px;
+}
+
+#contactpage .subscribe #emailId:focus {
+  border-top-style: none;
+  outline: none;
+}
+
+#contactpage .subscribe #messagearea {
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  color: #202040;
+  font-weight: lighter;
+  height: 200px;
+  width: 90%;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: #202040;
+}
+
+#contactpage .subscribe #messagearea:focus {
+  outline: none;
+}
+
+#contactpage .subscribe #mailimg {
+  height: 30px;
+  width: 30px;
+}
+
+#contactpage .subscribe .text-success {
+  font-family: "Fredoka One", cursive;
+}
+
+#contactpage .subscribe .text-danger {
+  font-family: "Fredoka One", cursive;
+}
+
+#contactpage .submitbtn {
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  color: auto;
+  font-weight: bold;
+}
+
+#contactpage .phoneAdd {
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  color: auto;
+  font-weight: bold;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 0px;
+  border-color: #00fff0;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  -webkit-box-shadow: 20px 18px 10px -10px #777;
+          box-shadow: 20px 18px 10px -10px #777;
+}
+
+#contactpage .phoneAdd .numbers {
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  color: auto;
+  font-weight: bold;
+}
+
+#contactpage .phoneAdd #phoneimg {
+  height: 35px;
+  width: 35px;
+}
+
+#contactpage .phoneAdd #socialimg {
+  height: 35px;
+  width: 35px;
+  -webkit-transition: height 0.2s ease-in,width 0.2s ease-in;
+  transition: height 0.2s ease-in,width 0.2s ease-in;
+}
+
+#contactpage .phoneAdd #socialimg:hover {
+  cursor: pointer;
+  height: 39px;
+  width: 39px;
+}
+
+#contactpage .phoneAdd #wts {
+  border: none;
+  background-color: transparent;
+}
+
+#contactpage .contactTag {
+  text-align: center;
+}
+
+#contactpage .contactTag h2 {
+  font-size: 1.3rem;
+}
+
+#contactpage .googleMap {
+  margin-top: 30px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 0px;
+  border-color: #00fff0;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  -webkit-box-shadow: 20px 18px 10px -10px #777;
+          box-shadow: 20px 18px 10px -10px #777;
+}
+
+#contactpage .googleMap h5 {
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+}
+
+#contactpage .googleMap #mapimg {
+  height: 30px;
+  width: 30px;
+}
+
+#contactpage .alternateText {
+  font-family: "Fredoka One", cursive;
+  font-size: 0.9rem;
+}
+
+.footer {
+  margin: 20px 200px 0px 200px;
+  background-color: #faf9f9;
+  text-align: center;
+  -webkit-transition: margin 1s ease-in;
+  transition: margin 1s ease-in;
+  border-style: none;
+  border-radius: 5px;
+  border-width: 0px;
+  border-color: transparent;
+}
+
+.footer h1 {
+  padding: 5px;
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  color: #202040;
+  font-weight: bold;
+  -webkit-transition: font-size 0.5s linear;
+  transition: font-size 0.5s linear;
+}
+
+.footer .email {
+  margin-right: 50px;
+}
+
+.footer .icons {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  -webkit-transition: height 0.2s linear,width 0.2s linear;
+  transition: height 0.2s linear,width 0.2s linear;
+}
+
+.footer .icons:hover {
+  height: 25px;
+  width: 25px;
+}
+
+@media screen and (max-width: 1300px) {
+  header {
+    margin: auto 100px auto 100px;
+  }
+  header .lists {
+    width: 110px;
+  }
+  #mainarea {
+    margin: auto 100px auto 90px;
+  }
+  #contactpage {
+    margin: auto 100px auto 100px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    margin: auto 100px auto 100px;
+  }
+  header .lists {
+    width: 110px;
+  }
+  #mainarea {
+    margin: auto 100px auto 100px;
+  }
+  #mainarea .card {
+    margin: 50px auto auto 0px;
+  }
+  #contactpage {
+    margin: auto 100px auto 100px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    margin: auto 100px auto 100px;
+  }
+  header .lists {
+    width: 110px;
+  }
+  header .brand {
+    margin-top: 20px;
+  }
+  #mainarea {
+    margin: auto 70px auto 100px;
+  }
+  .footer {
+    margin: 20px 100px 0px 100px;
+  }
+  #contactpage {
+    margin: auto 100px auto 100px;
+  }
+  #contactpage .phoneAdd {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    margin: auto 50px auto 50px;
+  }
+  header .lists {
+    width: 110px;
+  }
+  header .brand {
+    margin-top: 20px;
+  }
+  #mainarea {
+    margin: auto 120px auto 100px;
+  }
+  .footer {
+    margin: 20px 50px 0px 50px;
+  }
+  #contactpage {
+    margin: auto 20px auto 20px;
+  }
+  #contactpage .phoneAdd {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    margin: auto 50px auto 10px;
+  }
+  header .lists {
+    width: 110px;
+  }
+  header .brand {
+    margin-top: 20px;
+  }
+  #mainarea {
+    margin: auto 100px auto 50px;
+  }
+  .footer {
+    margin: 20px 40px 0px 0px;
+  }
+  #contactpage {
+    margin: auto 10px auto 10px;
+  }
+  #contactpage .phoneAdd {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    margin: auto 30px auto 30px;
+  }
+  header .lists {
+    width: 130px;
+  }
+  header .brand {
+    margin-top: 20px;
+  }
+  #mainarea {
+    margin: auto 40px auto 40px;
+  }
+  .footer {
+    margin: 20px 35px 10px 0px;
+  }
+  .footer h1 {
+    font-size: 0.8rem;
+  }
+  #contactpage {
+    margin: auto 5px auto 5px;
+  }
+  #contactpage .phoneAdd {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    margin: auto 50px auto 0px;
+  }
+  header .lists {
+    width: 110px;
+  }
+  header .brand {
+    margin-top: 20px;
+  }
+  #mainarea {
+    margin: auto 45px auto 2px;
+  }
+  #mainarea .card {
+    margin: 50px auto auto 2px;
+  }
+  .footer {
+    padding-bottom: 5px;
+    margin: 20px 35px 10px 0px;
+  }
+  .footer h1 {
+    font-family: "Inconsolata", monospace;
+    font-size: 0.8rem;
+    color: #202040;
+    font-weight: bold;
+  }
+  #contactpage {
+    margin: auto 5px auto 5px;
+  }
+  #contactpage .phoneAdd {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  header {
+    margin: auto 35px auto 0px;
+  }
+  header .lists {
+    width: 110px;
+  }
+  header .brand {
+    margin-top: 20px;
+  }
+  #mainarea {
+    margin: auto 25px auto 2px;
+  }
+  #mainarea .card {
+    margin: 50px auto auto 2px;
+  }
+  .footer {
+    padding-bottom: 5px;
+    margin: 20px 25px 10px 0px;
+  }
+  .footer h1 {
+    font-family: "Inconsolata", monospace;
+    font-size: 0.8rem;
+    color: #202040;
+    font-weight: bold;
+  }
+  #contactpage {
+    margin: auto 2px auto 2px;
+  }
+  #contactpage .phoneAdd {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  header {
+    margin: auto 0px auto 0px;
+  }
+  header .lists {
+    width: 110px;
+  }
+  header .brand {
+    margin-top: 10px;
+  }
+  #mainarea {
+    margin: auto auto auto auto;
+  }
+  #mainarea .card {
+    margin: 50px auto auto auto;
+  }
+  .footer {
+    padding-bottom: 5px;
+    margin: 20px 0px 10px 0px;
+  }
+  .footer h1 {
+    font-family: "Inconsolata", monospace;
+    font-size: 0.7rem;
+    color: #202040;
+    font-weight: bold;
+  }
+  #contactpage {
+    margin: auto 2px auto 2px;
+  }
+  #contactpage .phoneAdd {
+    margin-top: 20px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

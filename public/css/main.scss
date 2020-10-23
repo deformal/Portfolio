@@ -1,0 +1,595 @@
+//font imports
+@import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One|Trochut&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Sacramento|Special+Elite&display=swap');
+//all variables
+$fontColor: #faf9f9;
+$HeaderFooterfont: #202040;
+$contactpagebgcolor:#a80038;
+$testingcolor: #00fff0;
+$aboutmePagebgcolor :#dfddc7;
+$footercolor: #a4d1c8;
+$defaultFontFamily: "Inconsolata", monospace;
+$newCardfont : 'Fredoka One', cursive; 
+//all mixins
+@mixin fontStyles($size, $color, $weight) {
+  font-family: $defaultFontFamily;
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+
+@mixin borderStyles($style, $radius, $width, $color) {
+  border-style: $style;
+  border-radius: $radius;
+  border-width: $width;
+  border-color: $color;
+}
+
+//mixins ends//
+//body 
+body::-webkit-scrollbar {
+  width: .8em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+background-color: $footercolor;
+border-radius: 10px;
+}
+
+//background
+#afterBody {
+  background-color: $fontColor;
+  //background-image: url("/css/11.png");
+  padding: 10px;
+}
+//header view only
+header {
+  margin: auto 280px auto 280px;
+  transition: margin 0.5s linear;
+  -webkit-transition:  margin 0.5s linear;
+  -ms-transition:  margin 0.5s linear;
+  nav {
+    .brand {
+      @include fontStyles(1.2rem, $HeaderFooterfont, bold);
+      letter-spacing: 2px;
+      display: inline-block;
+      border: none;
+      background-color: transparent;
+    }
+
+    .btns {
+      @include fontStyles(1rem, $HeaderFooterfont, bold);
+      letter-spacing: 2px;
+      text-decoration: line-through;
+      text-decoration-color: transparent;
+      -webkit-text-decoration-colort:transparent;
+      -ms-text-decoration-colort:transparent;
+      transition: 0.5s;
+      -webkit-transition: 0.5s ;
+      border: none;
+      background-color: transparent;
+    }
+    // .btns:hover {
+    //   text-decoration-color: $bgcolor;
+    //   cursor: pointer;
+    // }
+  
+    .brand:after {
+      content: "";
+      width: 0px;
+      height: 3px;
+      display: block;
+      background: $testingcolor;
+      transition: 0.8s;
+      -webkit-transition: 0.8s ;
+    }
+    .brand:hover {
+      cursor: pointer;
+    }
+    .brand:hover:after {
+      width: 100%;
+    }
+    .brand:focus{
+      outline: none;
+    }
+    .btns:after {
+      content: "";
+      width: 0px;
+      height: 3px;
+      display: block;
+      background: $testingcolor;
+      transition: 0.8s;
+      -webkit-transition: 0.8s ;
+    }
+    .btns:hover {
+      cursor: pointer;
+    }
+    .btns:hover:after {
+      width: 100%;
+    }
+    .btns:focus{
+      outline: none;
+    }
+  }
+  .navbar-toggler{
+    margin-top: 0;
+    height: 30px;
+    width: 40px;;
+  }
+  .navbar-toggler-icon{
+    height: 15px;
+    width: 15px;;
+    
+  }
+  .navbar-toggler:focus {
+    text-decoration: none;
+  }
+}
+//aboutme page view only
+
+
+#mainarea {
+  margin: auto 200px auto 200px;
+  padding-bottom: 20px;
+  background-color: $aboutmePagebgcolor;
+  transition: margin 1.5s ease,width 0.8s linear;
+  -webkit-transition:  margin 1.5s ease,width 0.8s linear;
+  -ms-transition:  margin 1.5s ease,width 0.8s linear;
+  @include borderStyles(solid, 10px, 1px, transparent);
+.card-title {
+ font-family: $newCardfont;
+   font-size: 1.5rem;;
+  }
+  .card {
+    padding: 8px;;
+    transform: rotateY(15deg);
+    -ms-transform: rotateY(15deg); /* IE 9 */
+    -webkit-transform: rotateY(15deg); /* Safari 3-8 */
+    margin: 50px auto auto 28px;
+    @include borderStyles(solid, 10px, 0px, $testingcolor);
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 20px 18px 10px -4px #777;
+    transition: transform 0.2s linear, box-shadow 0.5s ease-out, margin 0.8s linear ;
+    -webkit-transition: transform 0.2s linear, box-shadow 0.5s ease-out, margin 0.8s linear; /* For Safari 3.1 to 6.0 */
+    color: $HeaderFooterfont;
+      .card-text{
+        
+       font-family:$newCardfont;
+       font-size: 1rem;
+       color: black;
+      }
+      .cardbtn{
+     @include fontStyles(auto,auto ,bolder )
+      }
+      form{
+        margin: 0;
+        padding: 0;;
+      }
+    }
+  .card:hover {
+    transform: rotateY(1deg);
+    -ms-transform: rotateY(1deg); /* IE 9 */
+    -webkit-transform: rotateY(1deg); /* Safari 3-8 */
+    box-shadow: 15px 15px 10px -10px $testingcolor;
+
+  }
+  .card-text:hover{
+    cursor: pointer;;
+  }
+  .aboutArea{
+    perspective: 1900px;
+  }
+  .skillsArea{
+    perspective: 1900px;
+  }
+  .projectsArea{
+    perspective: 1900px;
+  }
+
+
+}
+
+
+//contact me page view
+#contactpage{
+  transition: margin 0.7s linear;
+  margin:auto 200px auto 200px;
+  background-color: $aboutmePagebgcolor;
+  padding: 30px;
+  @include borderStyles(solid,10px ,1px ,transparent );
+  h2{
+    font-family: $newCardfont;
+    margin-bottom: 60px;
+    color: $HeaderFooterfont;
+  }
+  h4{
+    @include fontStyles(1rem,#393e46,bold ); 
+    padding-bottom: 10px;;
+  }
+  .subscribe{
+    @include borderStyles(solid,10px ,0px ,$testingcolor );
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 20px 18px 10px -10px #777;
+    transition: box-shadow 0.8s ease-in;
+  #emailId{
+    @include fontStyles(1rem,$HeaderFooterfont,bold );
+    width: 90%;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right:none ;
+    border-bottom-color: $HeaderFooterfont;
+    border-bottom-width: 2px;;
+  }
+#emailId:focus{
+border-top-style: none;
+outline: none;
+}
+       #messagearea{
+        @include fontStyles(1rem,$HeaderFooterfont,lighter );
+      height: 200px;
+      width: 90%;
+      @include borderStyles(solid,10px ,2px ,$HeaderFooterfont);
+      }
+           #messagearea:focus{
+              outline: none;
+                }
+            #mailimg{ 
+              height: 30px;
+              width: 30px;;
+                  }
+
+.text-success{
+  font-family: $newCardfont;
+}
+.text-danger{
+  font-family: $newCardfont;
+}
+  }
+
+
+.submitbtn{
+  @include fontStyles(1rem,auto,bold );
+
+}
+.phoneAdd{
+  @include fontStyles(1rem,auto,bold );
+  @include borderStyles(solid,10px ,0px ,$testingcolor );
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 20px 18px 10px -10px #777;
+.numbers{
+  @include fontStyles(1rem,auto ,bold )
+}
+  #phoneimg{
+    height: 35px;
+    width: 35px;;
+    }
+    #socialimg{
+      height: 35px;
+      width: 35px;;
+      transition: height 0.2s ease-in,width 0.2s ease-in;
+    }
+    #socialimg:hover{
+cursor: pointer;
+height: 39px;
+width: 39px;;
+    }
+    #wts{
+      border:none;
+       background-color:transparent;
+    }
+}
+.contactTag{
+  text-align: center;
+  h2{
+    font-size: 1.3rem;
+
+  }
+
+}
+.googleMap{
+  margin-top: 30px;
+  @include borderStyles(solid,10px ,0px ,$testingcolor );
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 20px 18px 10px -10px #777;
+  h5{
+    @include fontStyles(1rem,black,bold );
+  }
+  #mapimg{
+    height: 30px;
+    width: 30px;;
+  }
+}
+.alternateText{
+  font-family: $newCardfont;
+  font-size: 0.9rem;
+}
+}
+
+
+
+
+
+
+
+
+
+//footer view only
+.footer {
+  margin: 20px 200px 0px 200px;
+  background-color: $fontColor;
+  text-align: center;
+  transition: margin 1s ease-in;
+  @include borderStyles(none, 5px, 0px,transparent);
+  h1 {
+    padding: 5px;
+    @include fontStyles(1rem, $HeaderFooterfont, bold);
+    transition: font-size 0.5s linear;
+  }
+  .email{
+    margin-right: 50px;
+  }
+.icons{
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  transition: height 0.2s linear,width 0.2s linear;
+}
+.icons:hover{
+height: 25px;
+width: 25px;
+}
+
+
+
+
+}
+//media queries
+@media screen and(max-width:1300px) {
+  header {
+    margin: auto 100px auto 100px;
+    .lists{
+      width: 110px;
+    }
+  }
+  #mainarea{
+    margin: auto 100px auto 90px;
+
+  }
+  #contactpage{
+    margin: auto 100px auto 100px;
+
+  }
+}
+@media screen and(max-width:1200px) {
+  header {
+    margin: auto 100px auto 100px;
+    .lists{
+      width: 110px;
+    }
+  }
+  #mainarea{
+    margin: auto 100px auto 100px;
+.card{
+  margin: 50px auto auto 0px;
+}
+  }
+  #contactpage{
+    margin: auto 100px auto 100px;
+
+  }
+}
+  @media screen and(max-width:1000px) {
+    header {
+      margin: auto 100px auto 100px;
+      .lists{
+        width: 110px;
+      }
+      .brand{
+        margin-top: 20px;
+      }
+    }
+    #mainarea{
+      margin: auto 70px auto 100px;
+
+    }
+    .footer{
+      margin: 20px 100px 0px 100px;
+     
+    }
+    #contactpage{
+      margin: auto 100px auto 100px;
+      .phoneAdd{
+        margin-top: 20px;;
+      }
+    }
+}
+@media screen and(max-width:700px) {
+  header {
+    margin: auto 50px auto 50px;
+    .lists{
+      width: 110px;
+    }
+    .brand{
+      margin-top: 20px;
+    } 
+  }
+  #mainarea{
+    margin: auto 120px auto 100px;
+
+  }
+  .footer{
+    margin: 20px 50px 0px 50px;
+   
+  }
+  #contactpage{
+    margin: auto 20px auto 20px;
+    .phoneAdd{
+      margin-top: 20px;;
+    }
+  }
+}
+
+@media screen and(max-width:600px) {
+  header {
+    margin: auto 50px auto 10px;
+    .lists{
+      width: 110px;
+    }
+    .brand{
+      margin-top: 20px;
+    
+  }
+}
+  #mainarea{
+    margin: auto 100px auto 50px;
+
+  }
+  .footer{
+    margin: 20px 40px 0px 0px;
+   
+  }
+  #contactpage{
+    margin: auto 10px auto 10px;
+    .phoneAdd{
+      margin-top: 20px;;
+    }
+  }
+}
+@media screen and(max-width:500px) {
+  header {
+    margin: auto 30px auto 30px;
+    .lists{
+      width: 130px;
+    }
+    .brand{
+      margin-top: 20px;
+    
+  }
+}
+  #mainarea{
+    margin: auto 40px auto 40px;
+
+  }
+  .footer{
+ margin: 20px 35px 10px 0px;
+   h1{
+    font-size: 0.8rem;
+   }
+  }
+  #contactpage{
+    margin: auto 5px auto 5px;
+    .phoneAdd{
+      margin-top: 20px;;
+    }
+  }
+}
+@media screen and(max-width:400px) {
+  header {
+    margin: auto 50px auto 0px;
+    .lists{
+      width: 110px;
+    }
+    .brand{
+      margin-top: 20px;
+    
+  }
+}
+  #mainarea{
+    margin: auto 45px auto 2px;
+    .card{
+      margin: 50px auto auto 2px;
+    }
+  }
+  .footer{
+  
+    padding-bottom: 5px;
+    margin: 20px 35px 10px 0px;
+   h1{
+    @include fontStyles(0.8rem, $HeaderFooterfont, bold);
+   }
+  }
+  #contactpage{
+    margin: auto 5px auto 5px;
+    .phoneAdd{
+      margin-top: 20px;;
+    }
+  }
+}
+@media screen and(max-width:380px) {
+  header {
+    margin: auto 35px auto 0px;
+    .lists{
+      width: 110px;
+    }
+    .brand{
+      margin-top: 20px;
+    
+  }
+}
+  #mainarea{
+    margin: auto 25px auto 2px;
+    .card{
+      margin: 50px auto auto 2px;
+    }
+  }
+  .footer{
+  
+    padding-bottom: 5px;
+    margin: 20px 25px 10px 0px;
+   h1{
+    @include fontStyles(0.8rem, $HeaderFooterfont, bold);
+   }
+  }
+  #contactpage{
+    margin: auto 2px auto 2px;
+    .phoneAdd{
+      margin-top: 20px;;
+    }
+  }
+}
+@media screen and(max-width:325px) {
+  header {
+    margin: auto 0px auto 0px;
+    .lists{
+      width: 110px;
+    }
+    .brand{
+      margin-top: 10px ;
+    }
+  }
+  #mainarea{
+    margin: auto auto auto auto;
+    .card{
+      margin: 50px auto auto auto;
+    }
+  }
+  .footer{
+  
+    padding-bottom: 5px;
+    margin: 20px 0px 10px 0px;
+   h1{
+    @include fontStyles(0.7rem, $HeaderFooterfont, bold);
+   }
+  }
+  #contactpage{
+    margin: auto 2px auto 2px;
+    .phoneAdd{
+      margin-top: 20px;;
+    }
+  }
+}
