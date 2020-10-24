@@ -593,10 +593,10 @@ header .navbar-toggler:focus {
 
 @media screen and (max-width: 380px) {
   header {
-    margin: auto 15px auto 0px;
+    margin: auto 2px auto 0px;
   }
   header .lists {
-    width: 80px;
+    width: 110px;
   }
   header .brand {
     margin-top: 20px;
