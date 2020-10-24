@@ -119,10 +119,10 @@ header .navbar-toggler:focus {
 #mainarea {
   margin: auto 200px auto 200px;
   padding-bottom: 20px;
-  background-color: #eeeeee;
+  background-color: #dfddc7;
   transition: margin 1.5s ease,width 0.8s linear;
   -webkit-transition: margin 1.5s ease,width 0.8s linear;
-  -ms-transition: margin 1.5s ease,width 0.8s linear; 
+  -ms-transition: margin 1.5s ease,width 0.8s linear;
   border-style: solid;
   border-radius: 10px;
   border-width: 1px;
@@ -208,7 +208,7 @@ header .navbar-toggler:focus {
   -webkit-transition: margin 0.7s linear;
   transition: margin 0.7s linear;
   margin: auto 200px auto 200px;
-  background-color: #eeeeee;
+  background-color: #dfddc7;
   padding: 30px;
   border-style: solid;
   border-radius: 10px;
@@ -562,7 +562,7 @@ header .navbar-toggler:focus {
     margin: auto 50px auto 0px;
   }
   header .lists {
-    width: 110px;
+    width: 130px;
   }
   header .brand {
     margin-top: 20px;
@@ -593,7 +593,7 @@ header .navbar-toggler:focus {
 
 @media screen and (max-width: 380px) {
   header {
-    margin: auto 35px auto 0px;
+    margin: auto 15px auto 0px;
   }
   header .lists {
     width: 110px;
