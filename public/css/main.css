@@ -559,7 +559,7 @@ header .navbar-toggler:focus {
 
 @media screen and (max-width: 400px) {
   header {
-    margin: auto 50px auto 0px;
+    margin: auto 20px auto 0px;
   }
   header .lists {
     width: 130px;
@@ -596,20 +596,20 @@ header .navbar-toggler:focus {
     margin: auto 15px auto 0px;
   }
   header .lists {
-    width: 110px;
+    width: 80px;
   }
   header .brand {
     margin-top: 20px;
   }
   #mainarea {
-    margin: auto 25px auto 2px;
+    margin: auto 28px auto 2px;
   }
   #mainarea .card {
     margin: 50px auto auto 2px;
   }
   .footer {
     padding-bottom: 5px;
-    margin: 20px 25px 10px 0px;
+    margin: 20px 60px 10px 0px;
   }
   .footer h1 {
     font-family: "Inconsolata", monospace;

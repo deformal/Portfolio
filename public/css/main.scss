@@ -500,7 +500,7 @@ width: 25px;
 }
 @media screen and(max-width:400px) {
   header {
-    margin: auto 50px auto 0px;
+    margin: auto 20px auto 0px;
     .lists{
       width: 130px;
     }
@@ -534,7 +534,7 @@ width: 25px;
   header {
     margin: auto 15px auto 0px;
     .lists{
-      width: 110px;
+      width: 80px;
     }
     .brand{
       margin-top: 20px;
@@ -542,7 +542,7 @@ width: 25px;
   }
 }
   #mainarea{
-    margin: auto 25px auto 2px;
+    margin: auto 28px auto 2px;
     .card{
       margin: 50px auto auto 2px;
     }
@@ -550,7 +550,7 @@ width: 25px;
   .footer{
   
     padding-bottom: 5px;
-    margin: 20px 25px 10px 0px;
+    margin: 20px 60px 10px 0px;
    h1{
     @include fontStyles(0.8rem, $HeaderFooterfont, bold);
    }
