@@ -13,7 +13,7 @@ const skillsTag = "<div class='card ' style='width: 18rem; '>" +
         "<div class='card-body'>" +
         "<h5 class='card-title font-weight-bold'>My Skills </h5>" +
         "<p class='card-text'>" +
-        "As a full stack web-developer I dont have money but what i do have is a very peticular set of skills which can be very useful to you. If you contact me just remember I will reach out to you and I will help you." +
+        " Few of my skills are mentioned here check 'em out" +
         "</p>" +
         "<form action='/skills' method='GET'>" +
         "<button class='btn btn-outline-danger cardbtn ' type='submit'>CHECK-ALL</button>" +

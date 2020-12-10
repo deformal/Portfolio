@@ -3,6 +3,8 @@
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Fredoka+One|Trochut&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poiret+One|Sacramento|Special+Elite&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
 body::-webkit-scrollbar {
   width: .8em;
 }
@@ -13,37 +15,36 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #a4d1c8;
   border-radius: 10px;
 }
 
 #afterBody {
-  background-color: #faf9f9;
-  padding: 10px;
+  padding-left: 18%;
+  padding-right: 17%;
+  background-color: #f7f7f7;
 }
 
 header {
-  margin: auto 280px auto 280px;
   transition: margin 0.5s linear;
   -webkit-transition: margin 0.5s linear;
   -ms-transition: margin 0.5s linear;
 }
 
 header nav .brand {
-  font-family: "Inconsolata", monospace;
-  font-size: 1.2rem;
-  color: #202040;
-  font-weight: bold;
+  font-family: "Fredoka One", cursive;
+  font-size: 1.1rem;
+  color: #222831;
+  font-weight: normal;
   letter-spacing: 2px;
-  display: inline-block;
   border: none;
+  padding-top: 8%;
   background-color: transparent;
 }
 
 header nav .btns {
   font-family: "Inconsolata", monospace;
   font-size: 1rem;
-  color: #202040;
+  color: black;
   font-weight: bold;
   letter-spacing: 2px;
   text-decoration: line-through;
@@ -62,7 +63,7 @@ header nav .brand:after {
   width: 0px;
   height: 3px;
   display: block;
-  background: #00fff0;
+  background: black;
   transition: 0.8s;
   -webkit-transition: 0.8s;
 }
@@ -84,7 +85,7 @@ header nav .btns:after {
   width: 0px;
   height: 3px;
   display: block;
-  background: #00fff0;
+  background: black;
   transition: 0.8s;
   -webkit-transition: 0.8s;
 }
@@ -117,9 +118,9 @@ header .navbar-toggler:focus {
 }
 
 #mainarea {
-  margin: auto 200px auto 200px;
+  padding-top: 6%;
   padding-bottom: 20px;
-  background-color: #dfddc7;
+  background-color: #7da87b;
   transition: margin 1.5s ease,width 0.8s linear;
   -webkit-transition: margin 1.5s ease,width 0.8s linear;
   -ms-transition: margin 1.5s ease,width 0.8s linear;
@@ -135,26 +136,16 @@ header .navbar-toggler:focus {
 }
 
 #mainarea .card {
-  padding: 8px;
-  transform: rotateY(15deg);
-  -ms-transform: rotateY(15deg);
-  /* IE 9 */
-  -webkit-transform: rotateY(15deg);
-  /* Safari 3-8 */
-  margin: 50px auto auto 28px;
+  padding: 10%;
+  margin-bottom: 10%;
+  background-color: whitesmoke;
   border-style: solid;
   border-radius: 10px;
   border-width: 0px;
-  border-color: #00fff0;
+  border-color: black;
   -webkit-box-shadow: 0 10px 6px -6px #777;
-  box-shadow: 20px 18px 10px -4px #777;
-  -webkit-transition: margin 0.8s linear, -webkit-transform 0.2s linear, -webkit-box-shadow 0.5s ease-out;
-  transition: margin 0.8s linear, -webkit-transform 0.2s linear, -webkit-box-shadow 0.5s ease-out;
-  transition: transform 0.2s linear, box-shadow 0.5s ease-out, margin 0.8s linear;
-  transition: transform 0.2s linear, box-shadow 0.5s ease-out, margin 0.8s linear, -webkit-transform 0.2s linear, -webkit-box-shadow 0.5s ease-out;
-  -webkit-transition: transform 0.2s linear, box-shadow 0.5s ease-out, margin 0.8s linear;
-  /* For Safari 3.1 to 6.0 */
-  color: #202040;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  color: black;
 }
 
 #mainarea .card .card-text {
@@ -164,7 +155,7 @@ header .navbar-toggler:focus {
 }
 
 #mainarea .card .cardbtn {
-  font-family: "Inconsolata", monospace;
+  font-family: "Fredoka One", cursive;
   font-size: auto;
   color: auto;
   font-weight: bolder;
@@ -176,39 +167,14 @@ header .navbar-toggler:focus {
 }
 
 #mainarea .card:hover {
-  transform: rotateY(1deg);
-  -ms-transform: rotateY(1deg);
-  /* IE 9 */
-  -webkit-transform: rotateY(1deg);
-  /* Safari 3-8 */
-  -webkit-box-shadow: 15px 15px 10px -10px #00fff0;
-          box-shadow: 15px 15px 10px -10px #00fff0;
-}
-
-#mainarea .card-text:hover {
-  cursor: pointer;
-}
-
-#mainarea .aboutArea {
-  -webkit-perspective: 1900px;
-          perspective: 1900px;
-}
-
-#mainarea .skillsArea {
-  -webkit-perspective: 1900px;
-          perspective: 1900px;
-}
-
-#mainarea .projectsArea {
-  -webkit-perspective: 1900px;
-          perspective: 1900px;
+  -webkit-box-shadow: 15px 15px 10px -10px black;
+          box-shadow: 15px 15px 10px -10px black;
 }
 
 #contactpage {
   -webkit-transition: margin 0.7s linear;
   transition: margin 0.7s linear;
-  margin: auto 200px auto 200px;
-  background-color: #dfddc7;
+  background-color: #7da87b;
   padding: 30px;
   border-style: solid;
   border-radius: 10px;
@@ -219,7 +185,7 @@ header .navbar-toggler:focus {
 #contactpage h2 {
   font-family: "Fredoka One", cursive;
   margin-bottom: 60px;
-  color: #202040;
+  color: black;
 }
 
 #contactpage h4 {
@@ -234,8 +200,7 @@ header .navbar-toggler:focus {
   border-style: solid;
   border-radius: 10px;
   border-width: 0px;
-  border-color: #00fff0;
-  background-color: white;
+  border-color: black;
   text-align: center;
   padding: 10px;
   -webkit-box-shadow: 20px 18px 10px -10px #777;
@@ -244,19 +209,20 @@ header .navbar-toggler:focus {
   transition: -webkit-box-shadow 0.8s ease-in;
   transition: box-shadow 0.8s ease-in;
   transition: box-shadow 0.8s ease-in, -webkit-box-shadow 0.8s ease-in;
+  background-color: whitesmoke;
 }
 
 #contactpage .subscribe #emailId {
-  font-family: "Inconsolata", monospace;
+  font-family: "Fredoka One", cursive;
   font-size: 1rem;
-  color: #202040;
+  color: black;
   font-weight: bold;
   width: 90%;
   background-color: transparent;
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom-color: #202040;
+  border-bottom-color: black;
   border-bottom-width: 2px;
 }
 
@@ -266,16 +232,16 @@ header .navbar-toggler:focus {
 }
 
 #contactpage .subscribe #messagearea {
-  font-family: "Inconsolata", monospace;
+  font-family: "Fredoka One", cursive;
   font-size: 1rem;
-  color: #202040;
+  color: black;
   font-weight: lighter;
   height: 200px;
   width: 90%;
   border-style: solid;
   border-radius: 10px;
   border-width: 2px;
-  border-color: #202040;
+  border-color: black;
 }
 
 #contactpage .subscribe #messagearea:focus {
@@ -296,22 +262,22 @@ header .navbar-toggler:focus {
 }
 
 #contactpage .submitbtn {
-  font-family: "Inconsolata", monospace;
+  font-family: "Fredoka One", cursive;
   font-size: 1rem;
   color: auto;
   font-weight: bold;
 }
 
 #contactpage .phoneAdd {
-  font-family: "Inconsolata", monospace;
+  font-family: "Fredoka One", cursive;
   font-size: 1rem;
   color: auto;
   font-weight: bold;
   border-style: solid;
   border-radius: 10px;
   border-width: 0px;
-  border-color: #00fff0;
-  background-color: white;
+  border-color: black;
+  background-color: whitesmoke;
   text-align: center;
   padding: 10px;
   -webkit-box-shadow: 20px 18px 10px -10px #777;
@@ -319,7 +285,7 @@ header .navbar-toggler:focus {
 }
 
 #contactpage .phoneAdd .numbers {
-  font-family: "Inconsolata", monospace;
+  font-family: "Fredoka One", cursive;
   font-size: 1rem;
   color: auto;
   font-weight: bold;
@@ -361,8 +327,8 @@ header .navbar-toggler:focus {
   border-style: solid;
   border-radius: 10px;
   border-width: 0px;
-  border-color: #00fff0;
-  background-color: white;
+  border-color: black;
+  background-color: whitesmoke;
   text-align: center;
   padding: 10px;
   -webkit-box-shadow: 20px 18px 10px -10px #777;
@@ -370,7 +336,7 @@ header .navbar-toggler:focus {
 }
 
 #contactpage .googleMap h5 {
-  font-family: "Inconsolata", monospace;
+  font-family: "Fredoka One", cursive;
   font-size: 1rem;
   color: black;
   font-weight: bold;
@@ -387,9 +353,13 @@ header .navbar-toggler:focus {
 }
 
 .footer {
-  margin: 20px 200px 0px 200px;
-  background-color: #faf9f9;
+  padding-top: 2%;
+  padding-bottom: 10%;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f7f7f7;
   -webkit-transition: margin 1s ease-in;
   transition: margin 1s ease-in;
   border-style: none;
@@ -399,263 +369,44 @@ header .navbar-toggler:focus {
 }
 
 .footer h1 {
-  padding: 5px;
   font-family: "Inconsolata", monospace;
   font-size: 1rem;
-  color: #202040;
-  font-weight: bold;
+  color: grey;
+  font-weight: normal;
   -webkit-transition: font-size 0.5s linear;
   transition: font-size 0.5s linear;
 }
 
-.footer .email {
-  margin-right: 50px;
-}
-
 .footer .icons {
-  position: absolute;
   height: 20px;
   width: 20px;
-  -webkit-transition: height 0.2s linear,width 0.2s linear;
-  transition: height 0.2s linear,width 0.2s linear;
 }
 
 .footer .icons:hover {
-  height: 25px;
-  width: 25px;
+  height: 21px;
+  width: 21px;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 1300px) {
-  header {
-    margin: auto 100px auto 100px;
-  }
-  header .lists {
-    width: 110px;
+@media only screen and (max-width: 400px) {
+  #afterBody {
+    padding-left: 3.2%;
+    padding-right: 5%;
   }
   #mainarea {
-    margin: auto 100px auto 90px;
+    background-color: #7da87b;
   }
-  #contactpage {
-    margin: auto 100px auto 100px;
+  .brand {
+    font-family: "Roboto", sans-serif;
+    font-size: 4rem;
+    color: black;
+    font-weight: normal;
   }
-}
-
-@media screen and (max-width: 1200px) {
-  header {
-    margin: auto 100px auto 100px;
+  .card {
+    margin-left: 4%;
   }
-  header .lists {
-    width: 110px;
-  }
-  #mainarea {
-    margin: auto 100px auto 100px;
-  }
-  #mainarea .card {
-    margin: 50px auto auto 0px;
-  }
-  #contactpage {
-    margin: auto 100px auto 100px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  header {
-    margin: auto 100px auto 100px;
-  }
-  header .lists {
-    width: 110px;
-  }
-  header .brand {
-    margin-top: 20px;
-  }
-  #mainarea {
-    margin: auto 70px auto 100px;
-  }
-  .footer {
-    margin: 20px 100px 0px 100px;
-  }
-  #contactpage {
-    margin: auto 100px auto 100px;
-  }
-  #contactpage .phoneAdd {
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  header {
-    margin: auto 50px auto 50px;
-  }
-  header .lists {
-    width: 110px;
-  }
-  header .brand {
-    margin-top: 20px;
-  }
-  #mainarea {
-    margin: auto 120px auto 100px;
-  }
-  .footer {
-    margin: 20px 50px 0px 50px;
-  }
-  #contactpage {
-    margin: auto 20px auto 20px;
-  }
-  #contactpage .phoneAdd {
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  header {
-    margin: auto 50px auto 10px;
-  }
-  header .lists {
-    width: 110px;
-  }
-  header .brand {
-    margin-top: 20px;
-  }
-  #mainarea {
-    margin: auto 100px auto 50px;
-  }
-  .footer {
-    margin: 20px 40px 0px 0px;
-  }
-  #contactpage {
-    margin: auto 10px auto 10px;
-  }
-  #contactpage .phoneAdd {
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  header {
-    margin: auto 30px auto 30px;
-  }
-  header .lists {
-    width: 130px;
-  }
-  header .brand {
-    margin-top: 20px;
-  }
-  #mainarea {
-    margin: auto 40px auto 40px;
-  }
-  .footer {
-    margin: 20px 35px 10px 0px;
-  }
-  .footer h1 {
-    font-size: 0.8rem;
-  }
-  #contactpage {
-    margin: auto 5px auto 5px;
-  }
-  #contactpage .phoneAdd {
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  header {
-    margin: auto 20px auto 0px;
-  }
-  header .lists {
-    width: 130px;
-  }
-  header .brand {
-    margin-top: 20px;
-  }
-  #mainarea {
-    margin: auto 45px auto 2px;
-  }
-  #mainarea .card {
-    margin: 50px auto auto 2px;
-  }
-  .footer {
-    padding-bottom: 5px;
-    margin: 20px 35px 10px 0px;
-  }
-  .footer h1 {
-    font-family: "Inconsolata", monospace;
-    font-size: 0.8rem;
-    color: #202040;
-    font-weight: bold;
-  }
-  #contactpage {
-    margin: auto 5px auto 5px;
-  }
-  #contactpage .phoneAdd {
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 380px) {
-  header {
-    margin: auto 2px auto 0px;
-  }
-  header .lists {
-    width: 110px;
-  }
-  header .brand {
-    margin-top: 20px;
-  }
-  #mainarea {
-    margin: auto 28px auto 2px;
-  }
-  #mainarea .card {
-    margin: 50px auto auto 2px;
-  }
-  .footer {
-    padding-bottom: 5px;
-    margin: 20px 60px 10px 0px;
-  }
-  .footer h1 {
-    font-family: "Inconsolata", monospace;
-    font-size: 0.8rem;
-    color: #202040;
-    font-weight: bold;
-  }
-  #contactpage {
-    margin: auto 2px auto 2px;
-  }
-  #contactpage .phoneAdd {
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 325px) {
-  header {
-    margin: auto 0px auto 0px;
-  }
-  header .lists {
-    width: 110px;
-  }
-  header .brand {
-    margin-top: 10px;
-  }
-  #mainarea {
-    margin: auto auto auto auto;
-  }
-  #mainarea .card {
-    margin: 50px auto auto auto;
-  }
-  .footer {
-    padding-bottom: 5px;
-    margin: 20px 0px 10px 0px;
-  }
-  .footer h1 {
-    font-family: "Inconsolata", monospace;
-    font-size: 0.7rem;
-    color: #202040;
-    font-weight: bold;
-  }
-  #contactpage {
-    margin: auto 2px auto 2px;
-  }
-  #contactpage .phoneAdd {
-    margin-top: 20px;
+  .subscribe {
+    background-color: #f8f7de;
   }
 }
 /*# sourceMappingURL=main.css.map */

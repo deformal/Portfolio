@@ -11,6 +11,7 @@
      "<button type='submit' class='btn btn-sm btn-outline-warning submitbtn'>Submit</button>" +
      "</form>";
 
+   
  var err = "<h3 class='text-danger'>Sorry! some problem occured</h3>";
  var success = "<h3 class='text-success'>THANK YOU</h3>";
 

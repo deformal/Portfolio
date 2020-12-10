@@ -26,10 +26,11 @@
     "bootstrap": "^4.5.3",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
-    "heroku": "^7.47.4",
-    "heroku-cli": "^7.0.9",
+    "heroku": "^0.2.0",
+    "heroku-cli": "^6.15.31",
     "nodemailer": "^6.4.14",
     "nodemon": "^2.0.6",
+    "rfs": "^9.0.3",
     "webpack": "^5.2.0"
   },
   "devDependencies": {

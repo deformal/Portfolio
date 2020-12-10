@@ -4,18 +4,22 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One|Trochut&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poiret+One|Sacramento|Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 //all variables
-$fontColor: #faf9f9;
-$HeaderFooterfont: #202040;
-$contactpagebgcolor:#a80038;
-$testingcolor: #00fff0;
-$aboutmePagebgcolor :#dfddc7;
-$footercolor: #a4d1c8;
+
+$mainareaColor:#7da87b;
+$contactColor:#7da87b;
+$newcardbckcolor:whitesmoke;
+$afterbodyColor:#f7f7f7;
+$newNameColor :#222831;
 $defaultFontFamily: "Inconsolata", monospace;
 $newCardfont : 'Fredoka One', cursive; 
+$newNamefont : 'Nerko One', cursive;
+$newNamefont2: 'Roboto', sans-serif;
 //all mixins
-@mixin fontStyles($size, $color, $weight) {
-  font-family: $defaultFontFamily;
+@mixin fontStyles($size, $color, $weight, $fontfam) {
+  font-family: $fontfam;
   font-size: $size;
   color: $color;
   font-weight: $weight;
@@ -30,6 +34,8 @@ $newCardfont : 'Fredoka One', cursive;
 
 //mixins ends//
 //body 
+
+
 body::-webkit-scrollbar {
   width: .8em;
 }
@@ -39,33 +45,32 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-background-color: $footercolor;
 border-radius: 10px;
 }
 
 //background
 #afterBody {
-  background-color: $fontColor;
+  padding-left:18%;
+  padding-right:17%;
+  background-color: $afterbodyColor;
   //background-image: url("/css/11.png");
-  padding: 10px;
 }
 //header view only
 header {
-  margin: auto 280px auto 280px;
   transition: margin 0.5s linear;
   -webkit-transition:  margin 0.5s linear;
   -ms-transition:  margin 0.5s linear;
   nav {
     .brand {
-      @include fontStyles(1.2rem, $HeaderFooterfont, bold);
+      @include fontStyles(1.1rem, $newNameColor, normal,$newCardfont);
       letter-spacing: 2px;
-      display: inline-block;
       border: none;
+      padding-top: 8%;
       background-color: transparent;
     }
 
     .btns {
-      @include fontStyles(1rem, $HeaderFooterfont, bold);
+      @include fontStyles(1rem, black, bold,$defaultFontFamily);
       letter-spacing: 2px;
       text-decoration: line-through;
       text-decoration-color: transparent;
@@ -86,7 +91,7 @@ header {
       width: 0px;
       height: 3px;
       display: block;
-      background: $testingcolor;
+      background: black;
       transition: 0.8s;
       -webkit-transition: 0.8s ;
     }
@@ -104,7 +109,7 @@ header {
       width: 0px;
       height: 3px;
       display: block;
-      background: $testingcolor;
+      background: black;
       transition: 0.8s;
       -webkit-transition: 0.8s ;
     }
@@ -136,9 +141,9 @@ header {
 
 
 #mainarea {
-  margin: auto 200px auto 200px;
+  padding-top: 6%;
   padding-bottom: 20px;
-  background-color: $aboutmePagebgcolor;
+  background-color: $mainareaColor;
   transition: margin 1.5s ease,width 0.8s linear;
   -webkit-transition:  margin 1.5s ease,width 0.8s linear;
   -ms-transition:  margin 1.5s ease,width 0.8s linear;
@@ -148,18 +153,13 @@ header {
    font-size: 1.5rem;;
   }
   .card {
-    padding: 8px;;
-    transform: rotateY(15deg);
-    -ms-transform: rotateY(15deg); /* IE 9 */
-    -webkit-transform: rotateY(15deg); /* Safari 3-8 */
-    margin: 50px auto auto 28px;
-    @include borderStyles(solid, 10px, 0px, $testingcolor);
+    padding: 10%;
+    margin-bottom: 10%;
+    background-color:$newcardbckcolor;
+    @include borderStyles(solid, 10px, 0px, black);
     -webkit-box-shadow: 0 10px 6px -6px #777;
     -moz-box-shadow: 0 10px 6px -6px #777;
-    box-shadow: 20px 18px 10px -4px #777;
-    transition: transform 0.2s linear, box-shadow 0.5s ease-out, margin 0.8s linear ;
-    -webkit-transition: transform 0.2s linear, box-shadow 0.5s ease-out, margin 0.8s linear; /* For Safari 3.1 to 6.0 */
-    color: $HeaderFooterfont;
+    color: black;
       .card-text{
         
        font-family:$newCardfont;
@@ -167,7 +167,7 @@ header {
        color: black;
       }
       .cardbtn{
-     @include fontStyles(auto,auto ,bolder )
+     @include fontStyles(auto,auto ,bolder,$newCardfont)
       }
       form{
         margin: 0;
@@ -175,24 +175,12 @@ header {
       }
     }
   .card:hover {
-    transform: rotateY(1deg);
-    -ms-transform: rotateY(1deg); /* IE 9 */
-    -webkit-transform: rotateY(1deg); /* Safari 3-8 */
-    box-shadow: 15px 15px 10px -10px $testingcolor;
+     
+    box-shadow: 15px 15px 10px -10px black;
 
   }
-  .card-text:hover{
-    cursor: pointer;;
-  }
-  .aboutArea{
-    perspective: 1900px;
-  }
-  .skillsArea{
-    perspective: 1900px;
-  }
-  .projectsArea{
-    perspective: 1900px;
-  }
+  
+ 
 
 
 }
@@ -201,45 +189,45 @@ header {
 //contact me page view
 #contactpage{
   transition: margin 0.7s linear;
-  margin:auto 200px auto 200px;
-  background-color: $aboutmePagebgcolor;
+  background-color:$contactColor ;
   padding: 30px;
   @include borderStyles(solid,10px ,1px ,transparent );
   h2{
     font-family: $newCardfont;
     margin-bottom: 60px;
-    color: $HeaderFooterfont;
+    color: black;
   }
   h4{
-    @include fontStyles(1rem,#393e46,bold ); 
+    @include fontStyles(1rem,#393e46,bold,$defaultFontFamily); 
     padding-bottom: 10px;;
   }
   .subscribe{
-    @include borderStyles(solid,10px ,0px ,$testingcolor );
-    background-color: white;
+    @include borderStyles(solid,10px ,0px ,black );
     text-align: center;
     padding: 10px;
     box-shadow: 20px 18px 10px -10px #777;
     transition: box-shadow 0.8s ease-in;
+    background-color: whitesmoke;
   #emailId{
-    @include fontStyles(1rem,$HeaderFooterfont,bold );
+    @include fontStyles(1rem,black,bold,$newCardfont );
     width: 90%;
     background-color: transparent;
     border-top: none;
     border-left: none;
     border-right:none ;
-    border-bottom-color: $HeaderFooterfont;
+    border-bottom-color: black;
     border-bottom-width: 2px;;
+  
   }
 #emailId:focus{
 border-top-style: none;
 outline: none;
 }
        #messagearea{
-        @include fontStyles(1rem,$HeaderFooterfont,lighter );
+        @include fontStyles(1rem,black,lighter,$newCardfont );
       height: 200px;
       width: 90%;
-      @include borderStyles(solid,10px ,2px ,$HeaderFooterfont);
+      @include borderStyles(solid,10px ,2px ,black);
       }
            #messagearea:focus{
               outline: none;
@@ -259,18 +247,18 @@ outline: none;
 
 
 .submitbtn{
-  @include fontStyles(1rem,auto,bold );
+  @include fontStyles(1rem,auto,bold,$newCardfont );
 
 }
 .phoneAdd{
-  @include fontStyles(1rem,auto,bold );
-  @include borderStyles(solid,10px ,0px ,$testingcolor );
-  background-color: white;
+  @include fontStyles(1rem,auto,bold,$newCardfont );
+  @include borderStyles(solid,10px ,0px ,black );
+  background-color:whitesmoke;
   text-align: center;
   padding: 10px;
   box-shadow: 20px 18px 10px -10px #777;
 .numbers{
-  @include fontStyles(1rem,auto ,bold )
+  @include fontStyles(1rem,auto ,bold,$newCardfont )
 }
   #phoneimg{
     height: 35px;
@@ -301,13 +289,13 @@ width: 39px;;
 }
 .googleMap{
   margin-top: 30px;
-  @include borderStyles(solid,10px ,0px ,$testingcolor );
-  background-color: white;
+  @include borderStyles(solid,10px ,0px ,black );
+  background-color:whitesmoke;
   text-align: center;
   padding: 10px;
   box-shadow: 20px 18px 10px -10px #777;
   h5{
-    @include fontStyles(1rem,black,bold );
+    @include fontStyles(1rem,black,bold,$newCardfont );
   }
   #mapimg{
     height: 30px;
@@ -319,277 +307,49 @@ width: 39px;;
   font-size: 0.9rem;
 }
 }
-
-
-
-
-
-
-
-
-
 //footer view only
 .footer {
-  margin: 20px 200px 0px 200px;
-  background-color: $fontColor;
-  text-align: center;
+    padding-top: 2%;
+    padding-bottom: 10%;
+   text-align: center;
+  justify-content: center;
+  background-color: $afterbodyColor;
   transition: margin 1s ease-in;
   @include borderStyles(none, 5px, 0px,transparent);
   h1 {
-    padding: 5px;
-    @include fontStyles(1rem, $HeaderFooterfont, bold);
+    @include fontStyles(1rem,grey ,normal,$defaultFontFamily );
     transition: font-size 0.5s linear;
   }
-  .email{
-    margin-right: 50px;
-  }
+  
 .icons{
-  position: absolute;
   height: 20px;
   width: 20px;
-  transition: height 0.2s linear,width 0.2s linear;
 }
 .icons:hover{
-height: 25px;
-width: 25px;
+height: 21px;
+width: 21px;
+cursor: pointer;
+}
+
 }
 
 
-
-
-}
-//media queries
-@media screen and(max-width:1300px) {
-  header {
-    margin: auto 100px auto 100px;
-    .lists{
-      width: 110px;
-    }
+@media only screen and (max-width: 400px) {
+  #afterBody {
+    padding-left:3.2%;
+    padding-right:5%;
+    //background-image: url("/css/11.png");
   }
   #mainarea{
-    margin: auto 100px auto 90px;
-
+    background-color: $mainareaColor;
   }
-  #contactpage{
-    margin: auto 100px auto 100px;
-
+  .brand{
+    @include fontStyles(4rem,black ,normal,$newNamefont2 )
   }
-}
-@media screen and(max-width:1200px) {
-  header {
-    margin: auto 100px auto 100px;
-    .lists{
-      width: 110px;
-    }
+  .card{
+    margin-left: 4%;
   }
-  #mainarea{
-    margin: auto 100px auto 100px;
-.card{
-  margin: 50px auto auto 0px;
-}
-  }
-  #contactpage{
-    margin: auto 100px auto 100px;
-
-  }
-}
-  @media screen and(max-width:1000px) {
-    header {
-      margin: auto 100px auto 100px;
-      .lists{
-        width: 110px;
-      }
-      .brand{
-        margin-top: 20px;
-      }
-    }
-    #mainarea{
-      margin: auto 70px auto 100px;
-
-    }
-    .footer{
-      margin: 20px 100px 0px 100px;
-     
-    }
-    #contactpage{
-      margin: auto 100px auto 100px;
-      .phoneAdd{
-        margin-top: 20px;;
-      }
-    }
-}
-@media screen and(max-width:700px) {
-  header {
-    margin: auto 50px auto 50px;
-    .lists{
-      width: 110px;
-    }
-    .brand{
-      margin-top: 20px;
-    } 
-  }
-  #mainarea{
-    margin: auto 120px auto 100px;
-
-  }
-  .footer{
-    margin: 20px 50px 0px 50px;
-   
-  }
-  #contactpage{
-    margin: auto 20px auto 20px;
-    .phoneAdd{
-      margin-top: 20px;;
-    }
-  }
-}
-
-@media screen and(max-width:600px) {
-  header {
-    margin: auto 50px auto 10px;
-    .lists{
-      width: 110px;
-    }
-    .brand{
-      margin-top: 20px;
-    
-  }
-}
-  #mainarea{
-    margin: auto 100px auto 50px;
-
-  }
-  .footer{
-    margin: 20px 40px 0px 0px;
-   
-  }
-  #contactpage{
-    margin: auto 10px auto 10px;
-    .phoneAdd{
-      margin-top: 20px;;
-    }
-  }
-}
-@media screen and(max-width:500px) {
-  header {
-    margin: auto 30px auto 30px;
-    .lists{
-      width: 130px;
-    }
-    .brand{
-      margin-top: 20px;
-    
-  }
-}
-  #mainarea{
-    margin: auto 40px auto 40px;
-
-  }
-  .footer{
- margin: 20px 35px 10px 0px;
-   h1{
-    font-size: 0.8rem;
-   }
-  }
-  #contactpage{
-    margin: auto 5px auto 5px;
-    .phoneAdd{
-      margin-top: 20px;;
-    }
-  }
-}
-@media screen and(max-width:400px) {
-  header {
-    margin: auto 20px auto 0px;
-    .lists{
-      width: 130px;
-    }
-    .brand{
-      margin-top: 20px;
-    
-  }
-}
-  #mainarea{
-    margin: auto 45px auto 2px;
-    .card{
-      margin: 50px auto auto 2px;
-    }
-  }
-  .footer{
-  
-    padding-bottom: 5px;
-    margin: 20px 35px 10px 0px;
-   h1{
-    @include fontStyles(0.8rem, $HeaderFooterfont, bold);
-   }
-  }
-  #contactpage{
-    margin: auto 5px auto 5px;
-    .phoneAdd{
-      margin-top: 20px;;
-    }
-  }
-}
-@media screen and(max-width:380px) {
-  header {
-    margin: auto 2px auto 0px;
-    .lists{
-      width: 110px;
-    }
-    .brand{
-      margin-top: 20px;
-    
-  }
-}
-  #mainarea{
-    margin: auto 28px auto 2px;
-    .card{
-      margin: 50px auto auto 2px;
-    }
-  }
-  .footer{
-  
-    padding-bottom: 5px;
-    margin: 20px 60px 10px 0px;
-   h1{
-    @include fontStyles(0.8rem, $HeaderFooterfont, bold);
-   }
-  }
-  #contactpage{
-    margin: auto 2px auto 2px;
-    .phoneAdd{
-      margin-top: 20px;;
-    }
-  }
-}
-@media screen and(max-width:325px) {
-  header {
-    margin: auto 0px auto 0px;
-    .lists{
-      width: 110px;
-    }
-    .brand{
-      margin-top: 10px ;
-    }
-  }
-  #mainarea{
-    margin: auto auto auto auto;
-    .card{
-      margin: 50px auto auto auto;
-    }
-  }
-  .footer{
-  
-    padding-bottom: 5px;
-    margin: 20px 0px 10px 0px;
-   h1{
-    @include fontStyles(0.7rem, $HeaderFooterfont, bold);
-   }
-  }
-  #contactpage{
-    margin: auto 2px auto 2px;
-    .phoneAdd{
-      margin-top: 20px;;
-    }
+  .subscribe{
+    background-color:#f8f7de;
   }
 }
