@@ -33,6 +33,7 @@ app.get("/", function(req, res) {
 app.get("/projects", function(req, res) {
 
     res.render("projects", { first: game, second: store, third: IssueTracker });
+    
 });
 
 

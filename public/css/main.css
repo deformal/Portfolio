@@ -63,7 +63,7 @@ header nav .brand:after {
   width: 0px;
   height: 3px;
   display: block;
-  background: black;
+  background: #fdb827;
   transition: 0.8s;
   -webkit-transition: 0.8s;
 }
@@ -73,7 +73,7 @@ header nav .brand:hover {
 }
 
 header nav .brand:hover:after {
-  width: 100%;
+  width: 98%;
 }
 
 header nav .brand:focus {
@@ -85,7 +85,7 @@ header nav .btns:after {
   width: 0px;
   height: 3px;
   display: block;
-  background: black;
+  background: #fdb827;
   transition: 0.8s;
   -webkit-transition: 0.8s;
 }
@@ -95,7 +95,7 @@ header nav .btns:hover {
 }
 
 header nav .btns:hover:after {
-  width: 100%;
+  width: 98%;
 }
 
 header nav .btns:focus {
@@ -120,7 +120,7 @@ header .navbar-toggler:focus {
 #mainarea {
   padding-top: 6%;
   padding-bottom: 20px;
-  background-color: #7da87b;
+  background-color: #fdb827;
   transition: margin 1.5s ease,width 0.8s linear;
   -webkit-transition: margin 1.5s ease,width 0.8s linear;
   -ms-transition: margin 1.5s ease,width 0.8s linear;
@@ -394,7 +394,7 @@ header .navbar-toggler:focus {
     padding-right: 5%;
   }
   #mainarea {
-    background-color: #7da87b;
+    background-color: #fdb827;
   }
   .brand {
     font-family: "Roboto", sans-serif;

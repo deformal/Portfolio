@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 //all variables
 
-$mainareaColor:#7da87b;
+$mainareaColor:#fdb827;
 $contactColor:#7da87b;
 $newcardbckcolor:whitesmoke;
 $afterbodyColor:#f7f7f7;
@@ -91,7 +91,7 @@ header {
       width: 0px;
       height: 3px;
       display: block;
-      background: black;
+      background: #fdb827;
       transition: 0.8s;
       -webkit-transition: 0.8s ;
     }
@@ -99,7 +99,7 @@ header {
       cursor: pointer;
     }
     .brand:hover:after {
-      width: 100%;
+      width: 98%;
     }
     .brand:focus{
       outline: none;
@@ -109,7 +109,7 @@ header {
       width: 0px;
       height: 3px;
       display: block;
-      background: black;
+      background: #fdb827;
       transition: 0.8s;
       -webkit-transition: 0.8s ;
     }
@@ -117,7 +117,7 @@ header {
       cursor: pointer;
     }
     .btns:hover:after {
-      width: 100%;
+      width: 98%;
     }
     .btns:focus{
       outline: none;
