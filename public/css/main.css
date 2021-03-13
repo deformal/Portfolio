@@ -19,8 +19,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 #afterBody {
-  padding-left: 18%;
-  padding-right: 17%;
+  padding-left: 15%;
+  padding-right: 15%;
   background-color: #f7f7f7;
 }
 
@@ -32,7 +32,7 @@ header {
 
 header nav .brand {
   font-family: "Fredoka One", cursive;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #222831;
   font-weight: normal;
   letter-spacing: 2px;
@@ -63,7 +63,7 @@ header nav .brand:after {
   width: 0px;
   height: 3px;
   display: block;
-  background: #fdb827;
+  background: white;
   transition: 0.8s;
   -webkit-transition: 0.8s;
 }
@@ -74,6 +74,7 @@ header nav .brand:hover {
 
 header nav .brand:hover:after {
   width: 98%;
+  background: #ff005c;
 }
 
 header nav .brand:focus {
@@ -82,10 +83,10 @@ header nav .brand:focus {
 
 header nav .btns:after {
   content: "";
-  width: 0px;
+  width: 0;
   height: 3px;
   display: block;
-  background: #fdb827;
+  background: white;
   transition: 0.8s;
   -webkit-transition: 0.8s;
 }
@@ -96,6 +97,7 @@ header nav .btns:hover {
 
 header nav .btns:hover:after {
   width: 98%;
+  background: #ff005c;
 }
 
 header nav .btns:focus {
@@ -120,7 +122,7 @@ header .navbar-toggler:focus {
 #mainarea {
   padding-top: 6%;
   padding-bottom: 20px;
-  background-color: #fdb827;
+  background-color: #ff005c;
   transition: margin 1.5s ease,width 0.8s linear;
   -webkit-transition: margin 1.5s ease,width 0.8s linear;
   -ms-transition: margin 1.5s ease,width 0.8s linear;
@@ -143,8 +145,8 @@ header .navbar-toggler:focus {
   border-radius: 10px;
   border-width: 0px;
   border-color: black;
-  -webkit-box-shadow: 0 10px 6px -6px #777;
-  -moz-box-shadow: 0 10px 6px -6px #777;
+  -webkit-box-shadow: 0 20px 26px -1px #26001b;
+  -moz-box-shadow: 0 20px 26px -1px #26001b;
   color: black;
 }
 
@@ -167,14 +169,14 @@ header .navbar-toggler:focus {
 }
 
 #mainarea .card:hover {
-  -webkit-box-shadow: 15px 15px 10px -10px black;
-          box-shadow: 15px 15px 10px -10px black;
+  -webkit-box-shadow: -10px 20px 26px 2px #26001b;
+  -moz-box-shadow: -10px 20px 26px 2px #26001b;
 }
 
 #contactpage {
   -webkit-transition: margin 0.7s linear;
   transition: margin 0.7s linear;
-  background-color: #7da87b;
+  background-color: #ff005c;
   padding: 30px;
   border-style: solid;
   border-radius: 10px;
@@ -383,18 +385,48 @@ header .navbar-toggler:focus {
 }
 
 .footer .icons:hover {
-  height: 21px;
-  width: 21px;
+  height: 22px;
+  width: 22px;
   cursor: pointer;
 }
 
-@media only screen and (max-width: 400px) {
+.footer .icons2 {
+  height: 20px;
+  width: 20px;
+}
+
+.footer .icons2:hover {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
+
+.footer .icons3 {
+  height: 20px;
+  width: 20px;
+}
+
+.footer .icons3:hover {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
+
+.footer .githublink {
+  text-decoration: none;
+  font-family: "Inconsolata", monospace;
+  font-size: 1rem;
+  color: grey;
+  font-weight: normal;
+}
+
+@media only screen and (max-width: 1600px) {
   #afterBody {
-    padding-left: 3.2%;
-    padding-right: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
   }
   #mainarea {
-    background-color: #fdb827;
+    background-color: #ff005c;
   }
   .brand {
     font-family: "Roboto", sans-serif;
@@ -403,7 +435,75 @@ header .navbar-toggler:focus {
     font-weight: normal;
   }
   .card {
-    margin-left: 4%;
+    margin-left: 0%;
+    margin-right: 5%;
+  }
+  .subscribe {
+    background-color: #f8f7de;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #afterBody {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  #mainarea {
+    background-color: #ff005c;
+  }
+  .brand {
+    font-family: "Roboto", sans-serif;
+    font-size: 4rem;
+    color: black;
+    font-weight: normal;
+  }
+  .card {
+    margin-left: 0%;
+    margin-right: 5%;
+  }
+  .subscribe {
+    background-color: #f8f7de;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #afterBody {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  #mainarea {
+    background-color: #ff005c;
+  }
+  .brand {
+    font-family: "Roboto", sans-serif;
+    font-size: 4rem;
+    color: black;
+    font-weight: normal;
+  }
+  .card {
+    margin-left: 0%;
+  }
+  .subscribe {
+    background-color: #f8f7de;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #afterBody {
+    padding-left: 5%;
+    padding-right: 4%;
+  }
+  #mainarea {
+    background-color: #ff005c;
+  }
+  .brand {
+    font-family: "Roboto", sans-serif;
+    font-size: 4rem;
+    color: black;
+    font-weight: normal;
+  }
+  .card {
+    margin-left: 0%;
   }
   .subscribe {
     background-color: #f8f7de;

@@ -13,13 +13,17 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //email client
-var transporter = nodemailer.createTransport({
+let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'drake9211@gmail.com',
-        pass: 'lltsidazgzmkxyor'
+      type: 'OAuth2',
+      user: "drake9211@gmail.com",
+      pass: "Saurabh007",
+      clientId: "254823274418-udgun4b3v6pcb0rjr43prbtvplo7use0.apps.googleusercontent.com",
+      clientSecret: "NjCeGUtzWZynBjtLGv6xi0nO",
+      refreshToken:"ya29.a0AfH6SMABdY-krZM0gDK_yGkvPx7FQU92b10T860uPl4acOwENdlDFkLIABJALvnzDB622AddAvQc8Q0hcVIL5W6WASbx4KQb_96ZzAcYfEGCAr9vhJ0S4SBAASn_mOt5Eu8ox6fYUR02NMre3bDqae43nYFq"
     }
-});
+  });
 
 
 app.get("/", function(req, res) {
