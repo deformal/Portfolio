@@ -14,9 +14,11 @@
    
  var err = "<h3 class='text-danger'>Sorry! some problem occured</h3>";
  var success = "<h3 class='text-success'>THANK YOU</h3>";
+ var duplicate = "<h3 class='text-primary'>You Already Reached out to me. </h3>"
 
  module.exports = {
      contactform,
      err,
-     success
+     success,
+     duplicate
  }

@@ -2,28 +2,55 @@ var PORT = process.env.PORT;
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-var nodemailer = require('nodemailer');
 const { aboutmeTag, skillsTag, projectsTag } = require("./components/homeModuels")
 const { game, store, IssueTracker } = require("./components/projectModuels")
-const { contactform, err, success } = require("./components/contactModules")
+const { contactform, err, success,duplicate } = require("./components/contactModules")
 const {frontEnd, backEnd,progLang,gameEngines} = require("./components/skillsModules")
+const dontenv = require('dotenv')
+dontenv.config();
+const mongoose = require('mongoose')
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
+//globalvars
+const dbstring = process.env.DB_STRING
+const port = process.env.PORT
 
-//email client
-let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      type: 'OAuth2',
-      user: "drake9211@gmail.com",
-      pass: "Saurabh007",
-      clientId: "254823274418-udgun4b3v6pcb0rjr43prbtvplo7use0.apps.googleusercontent.com",
-      clientSecret: "NjCeGUtzWZynBjtLGv6xi0nO",
-      refreshToken:"1//04yqRkUfUx9oRCgYIARAAGAQSNwF-L9Ir0FoIWhYKTGfaS9ht7lPbgNzFlQkeNpjktUp0GZha0esvHxJTTqaRHmhPLBO7G6kKvRw"
-    }
-  });
+
+
+//dbconnectionest
+mongoose.connect(dbstring,{useNewUrlParser:true,useUnifiedTopology: true });
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+//dbconnectionconfirmation
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function(err,result) {
+   if(err) console.error({err})
+   else{
+    console.log(`connected to the database ${dbstring}`)
+   }
+});
+
+const clientSchema = {
+    email : {
+      type: String,
+      required: true,
+      unique : true
+    },
+    phone: {
+       type: String,
+       unique: true,
+       required: true
+    },
+    description: String
+    
+}
+
+const Client = mongoose.model("Client",clientSchema) // creates a Collection named Article with scehma article schema
+//serverSchemas and models end
 
 
 app.get("/", function(req, res) {
@@ -54,21 +81,22 @@ app.post("/contact", function(req, res) {
     var text = req.body.message;
     var phonenumber = req.body.phone;
     var total = email + " " + phonenumber + "  " + text;
-    var mailOptions = {
-        from: "drake9211@gmail.com",
-        to: "drake9211@gmail.com",
-        subject: "this person needs help",
-        text: total
-    };
-    transporter.sendMail(mailOptions, function(error, info) {
-        if (error) {
-            res.render("contact", { formOrmsg: err });
-            console.log(error);
-        } else {
-            res.render("contact", { formOrmsg: success });
-            console.log('Email sent: ' + info.response);
+    const client = new Client({
+        email : email,
+        phone : phonenumber,
+        description : text
+    })
+    client.save(function (err, client) {
+        if (err) {
+        console.error(err);
+        res.render('contact',{formOrmsg:duplicate})
         }
-    });
+        else{
+            console.log(`Success new client is ${client} `)
+            res.render('contact',{formOrmsg:success})
+        }
+      })
+   
 });
 
 
@@ -81,6 +109,6 @@ app.get("/skills", function(req, res) {
 
 
 
-app.listen(process.env.PORT || 3000, function(req, res) {
-    console.log("server started on port 3000")
+app.listen(process.env.PORT, function(req, res) {
+    console.log(`Server started on port ${port}`)
 })
